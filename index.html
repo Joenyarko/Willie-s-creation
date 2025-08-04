@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willie's Creation</title>
+    <meta name="description" content="Professional woodworking and custom furniture crafting">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/Willie's creation.png" alt="Willie's Creation Logo" class="nav-icon">
+                    <span class="brand-text">Williams</span>
+                </a>
+            </div>
+            
+            <div class="nav-links desktop-nav">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    About
+                </a>
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    Services
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="gallery.html" class="mobile-nav-link">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-users"></i>
+                About
+            </a>
+            <a href="services.html" class="mobile-nav-link">
+                <i class="fas fa-tools"></i>
+                Services
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="heroSection">
+        <div class="hero-slide active" style="background-image: url('assets/hero-1.jpg')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Handcrafted Excellence</h1>
+                <p class="hero-subtitle">Creating timeless furniture pieces with passion and precision</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html" class="btn btn-primary">Discover Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Consultation</a>
+                </div>
+                <!-- Social Media Links - MOVED HERE -->
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slide" style="background-image: url('assets/hero-2.jpg')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Custom Furniture Design</h1>
+                <p class="hero-subtitle">Transforming your vision into beautiful, functional pieces</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html" class="btn btn-primary">Discover Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Consultation</a>
+                </div>
+                <!-- Social Media Links - MOVED HERE -->
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slide" style="background-image: url('assets/hero-4.jpg')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Woodworking</h1>
+                <p class="hero-subtitle">Crafted with attention to detail and built to last generations</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html" class="btn btn-primary">Discover Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Consultation</a>
+                </div>
+                <!-- Social Media Links - MOVED HERE -->
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Controls -->
+        <button class="hero-arrow hero-prev" id="heroPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-arrow hero-next" id="heroNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Slide Indicators -->
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+        
+        <!-- Social Media Links - REMOVED from here, moved inside hero-content -->
+        <!-- <div class="social-links"> ... </div> -->
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/0270769515" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

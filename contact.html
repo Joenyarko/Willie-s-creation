@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Willie's Creation</title>
+    <meta name="description" content="Get in touch with our team for custom furniture consultations and quotes">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-solid">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/Willie's creation.png" alt="Willie's Creation Logo" class="nav-icon">
+                    <span class="brand-text">Williams</span>
+                </a>
+            </div>
+            
+            <div class="nav-links desktop-nav">
+                <a href="index.html" class="nav-link1">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="gallery.html" class="nav-link1">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="about.html" class="nav-link1">
+                    <i class="fas fa-users"></i>
+                    About
+                </a>
+                <a href="services.html" class="nav-link1">
+                    <i class="fas fa-tools"></i>
+                    Services
+                </a>
+                <a href="contact.html" class="nav-link1 active">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="gallery.html" class="mobile-nav-link">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-users"></i>
+                About
+            </a>
+            <a href="services.html" class="mobile-nav-link">
+                <i class="fas fa-tools"></i>
+                Services
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-description">Ready to start your custom furniture project? Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="wardrobes">Custom Wardrobes</option>
+                                <option value="kitchen">Kitchen Cabinets</option>
+                                <option value="bedroom">Bedroom Furniture</option>
+                                <option value="entertainment">Entertainment Centers</option>
+                                <option value="office">Office Furniture</option>
+                                <option value="dining">Dining Furniture</option>
+                                <option value="repairs">Repairs & Restoration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+233 (27) 076-9515</p>
+                            <p>Mon-Sat: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@craftstudio.com</p>
+                            <p>quotes@craftstudio.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Old Winneba Rd.</p>
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Visit Our Workshop</h2>
+            <!-- <div class="map-placeholder">
+                <div class="map-content">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Map</h3>
+                    <p>123 Craftsman Avenue, Woodwork City, WC 12345</p>
+                    <p>Click to view directions in your preferred map application</p>
+                </div>
+            </div> -->
+            <div class="map-content">
+                <h3>Find Us Here</h3>
+                <p>Old Winneba Rd, Accra</p>
+                <p>Click the map to view directions in your preferred map application</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.2726619885775!2d-0.2549432250150804!3d5.526504994453659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9754260d11d1%3A0x144c4c6cb33349c3!2sChorkor%20Chemunaa%20last%20stop%20down!5e0!3m2!1sen!2sgh!4v1754293667647!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose CraftStudio?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>10+ Years Experience</h3>
+                    <p>Decade of expertise in custom woodworking and furniture crafting</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with comprehensive warranties on all projects</p>
+                </div>
+                
+                <!-- <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Skilled craf dedicated to bringing your vision to life</p>
+                </div> -->
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Individual attention and custom solutions for every client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-title">Willie's Creation</h3>
+                    <p>Handcrafted furniture and custom woodworking with passion and precision since 2015.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Custom Furniture</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kitchen Cabinets</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Office Furniture</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Wood Restoration</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Interior Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Old Winneba Rd, Accra</li>
+                        <li><i class="fas fa-phone"></i> 0270769515</li>
+                        <li><i class="fas fa-envelope"></i> info@williamscreation.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Willie's Creation. Joscode. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/0270769515" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

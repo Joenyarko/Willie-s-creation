@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Willie's Creation</title>
+    <meta name="description" content="View our portfolio of handcrafted furniture and woodworking projects">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-solid">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/Willie's creation.png" alt="Willie's Creation Logo" class="nav-icon">
+                    <span class="brand-text">Williams</span>
+                </a>
+            </div>
+            
+            <div class="nav-links desktop-nav">
+                <a href="index.html" class="nav-link1">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="gallery.html" class="nav-link1 active">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="about.html" class="nav-link1">
+                    <i class="fas fa-users"></i>
+                    About
+                </a>
+                <a href="services.html" class="nav-link1">
+                    <i class="fas fa-tools"></i>
+                    Services
+                </a>
+                <a href="contact.html" class="nav-link1">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="gallery.html" class="mobile-nav-link">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-users"></i>
+                About
+            </a>
+            <a href="services.html" class="mobile-nav-link">
+                <i class="fas fa-tools"></i>
+                Services
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Gallery</h1>
+            <p class="page-description">Explore our portfolio of handcrafted furniture and custom woodworking projects</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                <button class="filter-btn" data-filter="living">Living Room</button>
+                <button class="filter-btn" data-filter="office">Office</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="bedroom">
+                    <img src="assets/gallery/kitchen3.jpg" alt="Modern Kitchen Set" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Modern Kitchen Set</h3>
+                        <p>Contemporary design with clean lines and premium oak finish</p>
+                        <button class="view-btn" onclick="openLightbox('assets/gallery/kitchen3.jpg', 'Modern Kitchen Set', 'Contemporary design with clean lines and premium oak finish')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="kitchen">
+                    <img src="assets/gallery/wardrobe1.jpg" alt="Modern Kitchen Cabinets" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Modern Kitchen Cabinets</h3>
+                        <p>Sleek and functional kitchen storage solution</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/kitchen-modern.jpg', 'Modern Kitchen Cabinets', 'Sleek and functional kitchen storage solution')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="living">
+                    <img src="assets/gallery/wardrobe6.jpg" alt="Living Room Set" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Living Room Set</h3>
+                        <p>Comfortable and elegant living room furniture</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/living-room.jpg', 'Living Room Set', 'Comfortable and elegant living room furniture')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="office">
+                    <img src="assets/gallery/tvset4.jpg" alt="Executive Office Desk" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Executive Office Desk</h3>
+                        <p>Professional workspace with built-in storage</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/office-desk.jpg', 'Executive Office Desk', 'Professional workspace with built-in storage')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="custom">
+                    <img src="assets/gallery/office-desk3.jpg" alt="Custom Dining Table" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Custom Dining Table</h3>
+                        <p>Handcrafted dining table with unique design</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/custom-furniture.jpg', 'Custom Dining Table', 'Handcrafted dining table with unique design')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="bedroom">
+                    <img src="assets/gallery/kitchen2.jpg" alt="Modern Wardrobe" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Modern Wardrobe</h3>
+                        <p>Spacious wardrobe with sliding doors</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/modern-wardrobe.jpg', 'Modern Wardrobe', 'Spacious wardrobe with sliding doors')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="kitchen">
+                    <img src="assets/gallery/office-desk2.jpg" alt="Kitchen Dining Set" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Kitchen Dining Set</h3>
+                        <p>Complete kitchen dining solution</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/kitchen-dining.jpg', 'Kitchen Dining Set', 'Complete kitchen dining solution')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="living">
+                    <img src="src/assets/gallery/tv-stand.jpg" alt="TV Stand" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>TV Stand</h3>
+                        <p>Modern entertainment center with storage</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/tv-stand.jpg', 'TV Stand', 'Modern entertainment center with storage')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="custom">
+                    <img src="src/assets/gallery/dining-table.jpg" alt="Dining Table" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Dining Table</h3>
+                        <p>Elegant dining table for family gatherings</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/dining-table.jpg', 'Dining Table', 'Elegant dining table for family gatherings')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="office">
+                    <img src="src/assets/gallery/workspace.jpg" alt="Home Office Workspace" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Home Office Workspace</h3>
+                        <p>Complete home office setup with storage</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/workspace.jpg', 'Home Office Workspace', 'Complete home office setup with storage')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item hidden-item" data-category="bedroom">
+                    <img src="src/assets/gallery/bedroom-wooden.jpg" alt="Wooden Bedroom Set" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Wooden Bedroom Set</h3>
+                        <p>Traditional wooden bedroom furniture</p>
+                        <button class="view-btn" onclick="openLightbox('src/assets/gallery/bedroom-wooden.jpg', 'Wooden Bedroom Set', 'Traditional wooden bedroom furniture')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <div class="load-more-container">
+                <button class="btn btn-primary" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+   <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-title">Willie's Creation</h3>
+                    <p>Handcrafted furniture and custom woodworking with passion and precision since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Custom Furniture</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kitchen Cabinets</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Office Furniture</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Wood Restoration</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Interior Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Old Winneba Rd, Accra</li>
+                        <li><i class="fas fa-phone"></i> 0270769515</li>
+                        <li><i class="fas fa-envelope"></i> info@williamscreation.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Willie's Creation. Joscode. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/0270769515" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
