@@ -1,0 +1,27 @@
+{
+    "name": "Willie's Creation - Custom Furniture & Woodworking",
+    "short_name": "Willie's Creation",
+    "description": "Premium custom furniture and woodworking services in Ghana. Handcrafted beds, wardrobes, dining tables, office furniture, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4a6bff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/Willie's creation.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/Willie's creation.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "shopping", "lifestyle"],
+    "lang": "en",
+    "dir": "ltr"
+} 

@@ -3,15 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Willie's Creation</title>
-    <meta name="description" content="Learn about our story, values, and the skilled artisans behind our handcrafted furniture">
+    
+    <!-- Primary Meta Tags -->
+    <title>About Us - Willie's Creation | Our Story & Craftsmanship Legacy | Ghana</title>
+    <meta name="title" content="About Us - Willie's Creation | Our Story & Craftsmanship Legacy | Ghana">
+    <meta name="description" content="Discover the story behind Willie's Creation - a family-owned furniture business in Ghana since 2015. Learn about our values, craftsmanship, and commitment to quality custom furniture.">
+    <meta name="keywords" content="Willie's Creation story, Ghana furniture maker, custom furniture history, woodworking craftsmanship, furniture business Ghana, Williams furniture">
+    <meta name="author" content="Willie's Creation">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://williescreation.com/about.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/Willie's creation.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/Willie's creation.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Willie's creation.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://williescreation.com/about.html">
+    <meta property="og:title" content="About Us - Willie's Creation | Our Story & Craftsmanship Legacy | Ghana">
+    <meta property="og:description" content="Discover the story behind Willie's Creation - a family-owned furniture business in Ghana since 2015. Learn about our values, craftsmanship, and commitment to quality custom furniture.">
+    <meta property="og:image" content="https://williescreation.com/assets/Willie's creation.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Willie's Creation">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://williescreation.com/about.html">
+    <meta property="twitter:title" content="About Us - Willie's Creation | Our Story & Craftsmanship Legacy | Ghana">
+    <meta property="twitter:description" content="Discover the story behind Willie's Creation - a family-owned furniture business in Ghana since 2015. Learn about our values, craftsmanship, and commitment to quality custom furniture.">
+    <meta property="twitter:image" content="https://williescreation.com/assets/Willie's creation.png">
+    
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://williescreation.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About Us",
+                "item": "https://williescreation.com/about.html"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- About Page Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Willie's Creation",
+        "description": "Learn about our story, values, and the skilled artisans behind our handcrafted furniture",
+        "url": "https://williescreation.com/about.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Willie's Creation",
+            "alternateName": "Williams",
+            "description": "Premium custom furniture and woodworking services in Ghana since 2015",
+            "foundingDate": "2015",
+            "founder": {
+                "@type": "Person",
+                "name": "Williams"
+            },
+            "location": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "GH",
+                    "addressRegion": "Ghana"
+                }
+            }
+        }
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Preloader - Retained as per your existing code -->
-    <div class="preloader">
-        <div class="loader"></div>
+     <div class="preloader">
+        <img src="assets/Willie's creation.png" alt="Willie's Creation Logo" class="preloader-logo">
     </div>
 
     <!-- Navigation -->
@@ -25,11 +112,11 @@
             </div>
             
             <div class="nav-links desktop-nav">
-                <a href="index.html" class="nav-link1"><i class="fas fa-home"></i> Home</a>
-                <a href="gallery.html" class="nav-link1"><i class="fas fa-images"></i> Gallery</a>
-                <a href="about.html" class="nav-link1 active"><i class="fas fa-users"></i> About</a>
-                <a href="services.html" class="nav-link1"><i class="fas fa-tools"></i> Services</a>
-                <a href="contact.html" class="nav-link1"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a>
+                <a href="about.html" class="nav-link active"><i class="fas fa-users"></i> About</a>
+                <a href="services.html" class="nav-link"><i class="fas fa-tools"></i> Services</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -37,15 +124,19 @@
             </button>
         </div>
         
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
-            <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
-            <a href="about.html" class="mobile-nav-link"><i class="fas fa-users"></i> About</a>
-            <a href="services.html" class="mobile-nav-link"><i class="fas fa-tools"></i> Services</a>
-            <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
-        </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-users"></i> About</a>
+        <a href="services.html" class="mobile-nav-link"><i class="fas fa-tools"></i> Services</a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
 
     <main>
         <!-- Page Header Section - Consistent with other pages -->
@@ -165,7 +256,7 @@
                 <div class="founder-profile"> <!-- New div for single founder layout -->
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="https://placehold.co/300x300/f0f0f0/333333?text=William+Doe" alt="Williams Augustus - Founder & Master Craftsman">
+                            <img src="assets/gallery/alat.png" alt="Williams Augustus - Founder & Master Craftsman">
                         </div>
                         <h3>Williams Augustus</h3>
                         <p class="member-role">Founder & Master Craftsman</p>
@@ -181,7 +272,7 @@
     </main>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/0270769515" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/233270769515" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -192,11 +283,10 @@
                 <div class="footer-about">
                     <h3 class="footer-title">Willie's Creation</h3>
                     <p>Handcrafted furniture and custom woodworking with passion and precision since 2015.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                   <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100004616025932&mibextid=LQQJ4d" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/_mrwilliams?igsh=bjZkNGQ4bjd3aWNj" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@khwesiwilliams?_r=1&_d=eg5j108lc35285&sec_uid=MS4wLjABAAAA8CQ58-kRfVg5-DYe7ae5MSfohXxRngIB-jflgkHstLHJnguYF_xTXu0a0QiBLON7&share_author_id=7012001258534044677&sharer_language=en&source=h5_m&u_code=e045060h8h6d6h&ug_btm=b0,b5836&sec_user_id=MS4wLjABAAAANkJyArHoF_AWx8PZN7gWaJcQoQcIIgDlWrv9w9mUNtVXi_HR1DYWGPRBXGy50fN4&utm_source=whatsapp&social_share_type=5&utm_campaign=client_share&utm_medium=ios&tt_from=whatsapp&user_id=7060527911137117189&enable_checksum=1&share_link_id=42882FAA-C7C9-41CA-BBF6-66ABB326718A&share_app_id=1233" class="social-link"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
@@ -214,11 +304,11 @@
                 <div class="footer-services">
                     <h3 class="footer-title">Our Services</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Custom Furniture</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kitchen Cabinets</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Office Furniture</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Wood Restoration</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Interior Design</a></li>
+                      <li><a href="services.html"><i class="fas fa-chevron-right"></i> Custom Furniture</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Kitchen Cabinets</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Office Furniture</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Wood Restoration</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Interior Design</a></li>
                     </ul>
                 </div>
                 
@@ -227,7 +317,7 @@
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Old Winneba Rd, Accra</li>
                         <li><i class="fas fa-phone"></i> 0270769515</li>
-                        <li><i class="fas fa-envelope"></i> info@williamscreation.com</li>
+                        <li><i class="fas fa-envelope"></i> khwesiwilliams12345@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                     </ul>
                 </div>

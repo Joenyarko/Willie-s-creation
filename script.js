@@ -23,6 +23,8 @@ function initializeNavigation() {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('show');
+            // Toggle body class to prevent scrolling when menu is open
+            document.body.classList.toggle('mobile-menu-open');
         });
         
         // Close mobile menu when clicking on links
@@ -30,8 +32,18 @@ function initializeNavigation() {
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenu.classList.remove('show');
+                document.body.classList.remove('mobile-menu-open');
             });
         });
+        
+        // Close mobile menu with close button
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('show');
+                document.body.classList.remove('mobile-menu-open');
+            });
+        }
     }
     
     // Navbar scroll effect (only for home page)
@@ -227,25 +239,30 @@ function initializeContactForm() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
             
-            // Validate required fields
-            if (!data.name || !data.email || !data.message) {
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            // Validate email
-            if (!isValidEmail(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            showNotification('Thank you for your message! We will get back to you soon.', 'success');
-            this.reset();
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showNotification('Thank you for your message! We will get back to you soon.', 'success');
+                    this.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            showNotification(data["errors"].map(error => error["message"]).join(", "), 'error');
+                        } else {
+                            showNotification('Oops! There was a problem submitting your form', 'error');
+                        }
+                    })
+                }
+            }).catch(error => {
+                showNotification('Oops! There was a problem submitting your form', 'error');
+            });
         });
     }
 }
@@ -367,28 +384,45 @@ function debounce(func, wait) {
 // }, 16));
 
 // Loading animation
-window.addEventListener('load', function() {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.classList.add('fade-out');
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    }
+// window.addEventListener('load', function() {
+//     const preloader = document.querySelector('.preloader');
+//     if (preloader) {
+//         preloader.classList.add('fade-out');
+//         setTimeout(() => {
+//             preloader.style.display = 'none';
+//         }, 500);
+//     }
+
+
+ 
     
-    document.body.classList.add('loaded');
+//     document.body.classList.add('loaded');
     
-    // Trigger initial animations
-    const initialElements = document.querySelectorAll('.fade-in');
-    initialElements.forEach((element, index) => {
-        setTimeout(() => {
-            if (isElementInViewport(element)) {
-                element.classList.add('visible');
-            }
-        }, index * 100);
+//     // Trigger initial animations
+//     const initialElements = document.querySelectorAll('.fade-in');
+//     initialElements.forEach((element, index) => {
+//         setTimeout(() => {
+//             if (isElementInViewport(element)) {
+//                 element.classList.add('visible');
+//             }
+//         }, index * 100);
+//     });
+// });
+
+   window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1500);
     });
-});
-// Gallery Load More Functionality
+
+
+
+
+// // Gallery Load More Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const hiddenItems = document.querySelectorAll('.gallery-item.hidden-item');

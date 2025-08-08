@@ -4,7 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-.preloader {
+/* Preloader */
+        .preloader {
             position: fixed;
             top: 0;
             left: 0;
@@ -20,16 +21,22 @@
         .preloader.fade-out {
             opacity: 0;
         }
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f57920ff;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
+        .preloader-logo {
+            width: 150px;
+            height: auto;
+            animation: pulse 1.5s infinite;
         }
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 html, body {
     overflow-x: hidden; /* CRUCIAL: Ensure this is present and not overridden */
@@ -72,6 +79,15 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+/* Ensure mobile menu button is visible on all navbar states */
+.navbar .mobile-menu-btn {
+    color: #f57920ff !important;
+    z-index: 1001;
+}
+
+.navbar.navbar-solid .mobile-menu-btn {
+    color: #f57920ff !important;
+}
 
 .nav-container {
     display: flex;
@@ -80,6 +96,22 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Mobile navigation layout */
+@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Prevent body scroll when mobile menu is open */
+    body.mobile-menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
 }
 
 .nav-brand .brand-link {
@@ -124,6 +156,28 @@ body {
     color: #f57920ff;
 }
 
+/* Ensure nav-link1 styles are also applied to nav-link for consistency */
+.nav-links .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #ffffff; /* White for hero nav */
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+/* Color adjustment for scrolled/solid navbar */
+.nav-links .navbar.scrolled .nav-link,
+.nav-links .navbar.navbar-solid .nav-link {
+    color: #333; /* Darker color when scrolled or on solid nav pages */
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+    color: #f57920ff;
+}
+
 /* Removed .nav-link1 as it's redundant */
 .nav-links .nav-link1 {
     display: flex;
@@ -157,39 +211,94 @@ body {
 
 .mobile-menu {
     display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    background: #f57920ff;
+    bottom: 0;
+    background: linear-gradient(135deg, #f57920ff 0%, #e65a1a 100%);
     backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 9999; /* Higher z-index to ensure it's above everything */
     opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-100%);
+    /* Ensure mobile menu is not affected by navbar classes */
+    pointer-events: none;
 }
 
 .mobile-menu.show {
-    display: block;
-    max-height: 500px; /* Arbitrary large height to allow content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto; /* Re-enable pointer events when shown */
+}
+
+
+
+/* Mobile menu close button */
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+    transform: rotate(90deg);
 }
 
 .mobile-nav-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 20px;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
     text-decoration: none;
     color: #ffffff;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.5s ease forwards;
 }
 
+.mobile-nav-link:nth-child(2) { animation-delay: 0.1s; }
+.mobile-nav-link:nth-child(3) { animation-delay: 0.2s; }
+.mobile-nav-link:nth-child(4) { animation-delay: 0.3s; }
+.mobile-nav-link:nth-child(5) { animation-delay: 0.4s; }
+.mobile-nav-link:nth-child(6) { animation-delay: 0.5s; }
+
 .mobile-nav-link:hover {
-    background-color: rgba(139, 69, 19, 0.1);
-    color: #f57920ff;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-link i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hero Section (for index.html) */
@@ -885,6 +994,7 @@ body {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    object-position: top; /* Crop from the top */
     border-radius: 0.5rem; /* Apply border-radius to image too */
 }
 .team-member:hover .member-image img {
