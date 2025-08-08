@@ -100,6 +100,14 @@ body {
 
 /* Mobile navigation layout */
 @media (max-width: 768px) {
+    /* Lock scroll on index page only */
+    body.index-no-scroll {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+    }
     .nav-container {
         display: flex;
         justify-content: space-between;
