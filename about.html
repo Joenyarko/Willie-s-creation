@@ -150,37 +150,134 @@
             </div>
         </section>
 
-        <!-- Our Story Section (Timeline) -->
-        <section class="our-story-section" id="our-story">
+        <!-- Our Story Section -->
+        <style>
+            .modern-story {
+                padding: 6rem 0;
+                background-color: var(--bg-color, #ffffff);
+            }
+            .story-wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                align-items: center;
+            }
+            @media (min-width: 992px) {
+                .story-wrapper {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 5rem;
+                }
+            }
+            .story-content .section-title {
+                text-align: left;
+                margin-bottom: 1.5rem;
+            }
+            .story-content .section-title::after {
+                left: 0;
+                transform: none;
+            }
+            .story-text {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                color: var(--text-color, #555);
+                margin-bottom: 1.5rem;
+            }
+            .story-highlights {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                margin-top: 2.5rem;
+            }
+            .highlight-box {
+                background: var(--light-bg, #f8f9fa);
+                padding: 1.5rem;
+                border-radius: 12px;
+                border-left: 4px solid var(--primary-color, #8b5a2b);
+                transition: transform 0.3s ease;
+            }
+            .highlight-box:hover {
+                transform: translateY(-5px);
+            }
+            .highlight-box h4 {
+                margin-bottom: 0.5rem;
+                color: var(--primary-color, #8b5a2b);
+                font-size: 1.2rem;
+            }
+            .highlight-box p {
+                font-size: 0.95rem;
+                margin: 0;
+                color: var(--text-color, #555);
+            }
+            .story-image-wrapper {
+                position: relative;
+                padding-left: 2rem;
+                padding-bottom: 2rem;
+            }
+            .story-image-wrapper img {
+                width: 100%;
+                border-radius: 16px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                object-fit: cover;
+                aspect-ratio: 4/5;
+            }
+            .experience-badge {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: var(--primary-color, #8b5a2b);
+                color: white;
+                padding: 2rem;
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(139, 90, 43, 0.4);
+                border: 8px solid var(--bg-color, #ffffff);
+            }
+            .experience-badge .years {
+                font-size: 2.5rem;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 0.2rem;
+            }
+            .experience-badge .label {
+                font-size: 0.85rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        </style>
+        <section class="modern-story" id="our-story">
             <div class="container">
-                <h2 class="section-title">Our Journey Through Time</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2015</div>
-                        <div class="timeline-content">
-                            <h3>Humble Beginnings</h3>
-                            <p>Founded in a small house with just a workbench and a vision for quality craftsmanship. The founder, Williams, began his journey.</p>
+                <div class="story-wrapper">
+                    <div class="story-content">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="story-text">
+                            Founded in 2015 with just a workbench and a vision for quality craftsmanship, Williams began his journey in a small workspace. What started as a humble endeavor quickly grew into a passion for creating exceptional, custom-made furniture.
+                        </p>
+                        <p class="story-text">
+                            Over the years, we've expanded our workshop, invested in new technologies, and broadened our services to include comprehensive interior solutions. Today, we bring our bespoke furniture to a wider audience while maintaining our unwavering commitment to handcrafted quality and timeless elegance.
+                        </p>
+                        <div class="story-highlights">
+                            <div class="highlight-box">
+                                <h4>2015</h4>
+                                <p>Humble beginnings in a small workshop</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Today</h4>
+                                <p>Premium custom interior solutions</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2018</div>
-                        <div class="timeline-content">
-                            <h3>First Showroom</h3>
-                            <p>Opened our first retail space in the heart of the city, allowing customers to experience our exquisite work firsthand and connect with our artisans.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2020</div>
-                        <div class="timeline-content">
-                            <h3>Expansion & Innovation</h3>
-                            <p>Expanded our workshop, invested in new technologies, and broadened our service offerings to include custom interior solutions for homes and businesses.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2024</div>
-                        <div class="timeline-content">
-                            <h3>A New Chapter</h3>
-                            <p>Launched our new online presence, making our bespoke furniture accessible to a wider audience while maintaining our commitment to handcrafted quality.</p>
+                    <div class="story-image-wrapper">
+                        <img src="assets/gallery/wardrobe1.jpg" alt="Our Craftsmanship Journey" loading="lazy">
+                        <div class="experience-badge">
+                            <span class="years">10+</span>
+                            <span class="label">Years<br>Crafting</span>
                         </div>
                     </div>
                 </div>
